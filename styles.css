@@ -1,0 +1,264 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ccc;
+  }
+  
+  /* CSS DEL NAVBAR */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo img {
+    height: 50px;
+  }
+  
+  .search-bar input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+  }
+  
+  .search-bar button {
+    background-color: #f2f2f2;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    margin-left: 5px;
+    cursor: pointer;
+  }
+  
+  .user-menu a {
+    text-decoration: none;
+    color: #333;
+    margin-right: 15px;
+  }
+  
+  .cart {
+    position: relative;
+  }
+  
+  .cart img {
+    height: 30px;
+  }
+  
+  .cart span {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: #e74c3c;
+    color: #fff;
+    border-radius: 50%;
+    padding: 3px 6px;
+    font-size: 12px;
+  }
+  
+  /* CSS APARTADO CATEGORIAS */
+
+  .categories-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto; 
+    max-width: 100%; 
+    padding-top: 20px; 
+  }
+  
+  .category-box {
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: left; 
+    width: 300px; 
+  }
+  
+  .main-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .category-list {
+    list-style: circle;
+    padding: 1;
+    margin: 0;
+  }
+  
+  .category-list li {
+    margin-bottom: 9px;
+  }
+  
+  .category-list a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+    display: block;
+    padding: 5px 0; 
+  }
+  
+  .category-list a:hover {
+    color: #e74c3c;
+  }
+
+  .subcategory-box {
+    display: none;
+  }
+  
+  
+
+  /* CSS DEL CUADRO DE CARDS */
+.card-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: #f2f2f2;
+  padding: 30px 0;
+}
+
+.card {
+  width: calc(28% - 0px); /* Ancho de las columnas con margen */
+  background-color: #fff;
+  border: 4px solid #ccc;
+  border-radius: 30px;
+  padding: 40px;
+  margin-bottom: 40px; /* Margen inferior */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.card img {
+  max-width: 30%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.card p {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.card button {
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 5px 15px;
+  cursor: pointer;
+}
+
+.additional-text {
+  display: none;
+}
+
+/* CSS DEL FOOTER */
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 30px 0;
+  text-align: center;
+}
+
+.contact-section,
+.social-section,
+.copyright-section {
+  margin-bottom: 30px;
+}
+
+.contact-list,
+.social-list {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.contact-list li,
+.social-list li {
+  margin-bottom: 10px;
+}
+
+.contact-list a,
+.social-list a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.social-list img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+/* Estilos para pantallas pequeñas (hasta 768px de ancho) */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .user-menu {
+    margin-top: 10px;
+  }
+
+  .card-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+    margin: 10px 0;
+  }
+
+  .footer {
+    padding: 20px 0;
+  }
+}
+
+/* Estilos para pantallas medianas (769px a 1024px de ancho) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .main-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-section {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .card {
+    width: calc(33.33% - 20px);
+    margin: 10px;
+  }
+}
+
+/* Estilos para pantallas grandes (más de 1024px de ancho) */
+@media (min-width: 1025px) {
+  .main-content {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .card-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .card {
+    width: calc(25% - 20px);
+    margin: 10px;
+  }
+}
